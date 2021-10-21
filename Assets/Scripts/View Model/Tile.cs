@@ -39,6 +39,6 @@ public class Tile : MonoBehaviour
 
     public void Load(Vector3 v)
     {
-        Load(new Point((int) v.x, (int) v.y), (int) v.z);
+        Load(new Point((int) v.x, (int) v.z), (int) v.y);
     }
 }
