@@ -1087,6 +1087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1592162210054577162}
   - component: {fileID: 1592162210062037974}
+  - component: {fileID: 3771180630223723203}
   m_Layer: 0
   m_Name: DogKnight
   m_TagString: Untagged
@@ -1107,6 +1108,7 @@ Transform:
   m_Children:
   - {fileID: 1592162210054577592}
   - {fileID: 1592162210054577238}
+  - {fileID: 2905759820851174206}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1129,6 +1131,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3771180630223723203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592162210054733930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc531db4f58df348a684ae40d78f25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dir: 2
 --- !u!1 &1592162210054733932
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,6 +2326,36 @@ Transform:
   - {fileID: 1592162210054577244}
   m_Father: {fileID: 1592162210054577164}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8486610653524871500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2905759820851174206}
+  m_Layer: 0
+  m_Name: Jumper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2905759820851174206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8486610653524871500}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.77647007, y: 0.55961114, z: -0.3660978}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1592162210054577162}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2569098892430285771
 PrefabInstance:

@@ -184,6 +184,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 3339673109477841992, guid: 1f3dfa9cc6a1af24ebf24ba25e4ab366, type: 3}
+  selectedTileColor: {r: 0, g: 1, b: 1, a: 1}
+  defaultTileColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &317216908
 Transform:
   m_ObjectHideFlags: 0
@@ -367,7 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  follow: {fileID: 0}
+  follow: {fileID: 1239538318}
 --- !u!1001 &1239538317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -479,6 +481,8 @@ MonoBehaviour:
   pos:
     x: 0
     y: 0
+  heroPrefab: {fileID: 1592162210054733930, guid: b87c568ae1a716c499ce45c73d192693, type: 3}
+  currentUnit: {fileID: 0}
 --- !u!4 &1287752602
 Transform:
   m_ObjectHideFlags: 0
