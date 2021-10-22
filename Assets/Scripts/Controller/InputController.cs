@@ -18,18 +18,16 @@ public class InputController : MonoBehaviour
         if (x != 0 || y != 0)
         {
             if (moveEvent != null)
-            {
                 moveEvent(this, new InfoEventArgs<Point>(new Point(x, y)));
-            }
+        }
 
-            for (int i = 0; i < _buttons.Length; ++i)
+        for (int i = 0; i < _buttons.Length; ++i)
+        {
+            if (Input.GetButtonUp(_buttons[i]))
             {
-                if (Input.GetButtonUp(_buttons[i]))
+                if (fireEvent != null)
                 {
-                    if (fireEvent != null)
-                    {
-                        fireEvent(this, new InfoEventArgs<int>(i));
-                    }
+                    fireEvent(this, new InfoEventArgs<int>(i));
                 }
             }
         }
