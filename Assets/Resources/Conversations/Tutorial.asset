@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95da00c327ea4264a995ed5f1e1dda82, type: 3}
+  m_Name: Tutorial
+  m_EditorClassIdentifier: 
+  list:
+  - messages:
+    - Hello semuanya
+    - Ini conversation ke dua
+    speaker: {fileID: 21300000, guid: 145978568a150f04d8993c85247a1d7b, type: 3}
+    anchor: 8
+  - messages:
+    - Ini tutorial
+    speaker: {fileID: 21300000, guid: 145978568a150f04d8993c85247a1d7b, type: 3}
+    anchor: 0

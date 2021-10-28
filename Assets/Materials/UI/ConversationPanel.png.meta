@@ -1,0 +1,696 @@
+fileFormatVersion: 2
+guid: 752c2abcb3f649b4d8cd3aea1a64bd82
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1805515194120515439
+    second: ConversationPanel_0
+  - first:
+      213: -6260199247424572019
+    second: ConversationPanel_1
+  - first:
+      213: 4412817622867271515
+    second: ConversationPanel_2
+  - first:
+      213: 8709376535888924169
+    second: ConversationPanel_3
+  - first:
+      213: 5563008443036601332
+    second: ConversationPanel_4
+  - first:
+      213: 834939949922730672
+    second: ConversationPanel_5
+  - first:
+      213: -3948838303272800427
+    second: ConversationPanel_6
+  - first:
+      213: -6996021637556461611
+    second: ConversationPanel_7
+  - first:
+      213: -2609135535778107116
+    second: ConversationPanel_8
+  - first:
+      213: -8537372916602628241
+    second: ConversationPanel_9
+  - first:
+      213: -7650595003614473109
+    second: ConversationPanel_10
+  - first:
+      213: 5441520822402822014
+    second: ConversationPanel_11
+  - first:
+      213: -5059162718896272401
+    second: ConversationPanel_12
+  - first:
+      213: -4136926840293910180
+    second: ConversationPanel_13
+  - first:
+      213: 3426883941964506057
+    second: ConversationPanel_14
+  - first:
+      213: 1295923444645277778
+    second: ConversationPanel_15
+  - first:
+      213: 1059392488671284954
+    second: ConversationPanel_16
+  - first:
+      213: 5048826766516190314
+    second: ConversationPanel_17
+  - first:
+      213: 1432334691548048633
+    second: ConversationPanel_18
+  - first:
+      213: -5904818378625991111
+    second: ConversationPanel_19
+  - first:
+      213: 3279675248030382354
+    second: ConversationPanel_20
+  - first:
+      213: 1547300674120927641
+    second: ConversationPanel_21
+  - first:
+      213: -2897798999172911747
+    second: ConversationPanel_22
+  - first:
+      213: 5569997361213739020
+    second: ConversationPanel_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 71, y: 70, z: 2, w: 70}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ConversationPanel_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 105
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6faf16c08a7e0910800000000000000
+      internalID: 1805515194120515439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_1
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 105
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d853712d3fd4f19a0800000000000000
+      internalID: -6260199247424572019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 105
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f56957f3a7d3d30800000000000000
+      internalID: 4412817622867271515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 105
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e08cca0dbedd870800000000000000
+      internalID: 8709376535888924169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 105
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb02b174b6c33d40800000000000000
+      internalID: 5563008443036601332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_5
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 105
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b24de3f57d469b00800000000000000
+      internalID: 834939949922730672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 70
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55fe7f92c78e239c0800000000000000
+      internalID: -3948838303272800427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_7
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 70
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df108c136329ee90800000000000000
+      internalID: -6996021637556461611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_8
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 70
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411f813dd0d7acbd0800000000000000
+      internalID: -2609135535778107116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_9
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 70
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f671cd6b098258980800000000000000
+      internalID: -8537372916602628241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 70
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b645e29f060a3d590800000000000000
+      internalID: -7650595003614473109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_11
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 70
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f26398b5a248b40800000000000000
+      internalID: 5441520822402822014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 35
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: febc94fcf4e3ac9b0800000000000000
+      internalID: -5059162718896272401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_13
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 35
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59908605fea696c0800000000000000
+      internalID: -4136926840293910180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_14
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 35
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3e84fe9ccbe8f20800000000000000
+      internalID: 3426883941964506057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_15
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 35
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250be2eb18b0cf110800000000000000
+      internalID: 1295923444645277778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_16
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 35
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade08f40bd7b3be00800000000000000
+      internalID: 1059392488671284954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_17
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 35
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c7eaeb139011640800000000000000
+      internalID: 5048826766516190314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fca03920dca0e310800000000000000
+      internalID: 1432334691548048633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_19
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ebcce38fedd0ea0800000000000000
+      internalID: -5904818378625991111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_20
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219fd79f24fb38d20800000000000000
+      internalID: 3279675248030382354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_21
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99943b1e3cd197510800000000000000
+      internalID: 1547300674120927641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_22
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7de0d7d923f8c7d0800000000000000
+      internalID: -2897798999172911747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConversationPanel_23
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 12.333333
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c001203c61b9c4d40800000000000000
+      internalID: 5569997361213739020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
