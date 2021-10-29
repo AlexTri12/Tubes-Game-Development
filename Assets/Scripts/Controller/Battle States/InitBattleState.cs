@@ -40,7 +40,7 @@ public class InitBattleState : BattleState
             unit.Match();
 
             if (i == 0)
-                owner.currentUnit = unit;
+                units.Add(unit);
 
             Movement m = instance.AddComponent(components[i]) as Movement;
             m.range = 4;

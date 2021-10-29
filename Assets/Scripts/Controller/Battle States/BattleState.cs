@@ -27,6 +27,18 @@ public class BattleState : State
         get { return owner.pos; }
         set { owner.pos = value; }
     }
+    public AbilityMenuPanelController abilityMenuPanelController
+    {
+        get { return owner.abilityMenuPanelController; }
+    }
+    public Turn turn
+    {
+        get { return owner.turn; }
+    }
+    public List<Unit> units
+    {
+        get { return owner.units; }
+    }
 
     protected virtual void Awake()
     {
