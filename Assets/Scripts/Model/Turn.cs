@@ -10,6 +10,7 @@ public class Turn
     public bool lockMove;
     Tile startTile;
     Directions startDir;
+    public GameObject ability;
 
     public void Change(Unit current)
     {

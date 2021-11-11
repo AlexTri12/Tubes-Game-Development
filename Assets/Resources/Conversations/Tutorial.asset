@@ -15,10 +15,15 @@ MonoBehaviour:
   list:
   - messages:
     - Hello semuanya
-    - Ini conversation ke dua
+    - Ini tutorial
     speaker: {fileID: 21300000, guid: 145978568a150f04d8993c85247a1d7b, type: 3}
     anchor: 8
   - messages:
-    - Ini tutorial
+    - Klik kiri untuk confirm
+    - Klik kanan untuk cancel
     speaker: {fileID: 21300000, guid: 145978568a150f04d8993c85247a1d7b, type: 3}
     anchor: 0
+  - messages:
+    - Selamat bermain :)
+    speaker: {fileID: 21300000, guid: 145978568a150f04d8993c85247a1d7b, type: 3}
+    anchor: 2

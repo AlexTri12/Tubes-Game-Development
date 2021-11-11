@@ -15,6 +15,6 @@ public class MoveSequenceState : BattleState
         Movement m = turn.actor.GetComponent<Movement>();
         yield return StartCoroutine(m.Traverse(owner.currentTile));
         turn.hasUnitMoved = true;
-        owner.ChangeState<SelectUnitState>();
+        owner.ChangeState<CommandSelectionState>();
     }
 }

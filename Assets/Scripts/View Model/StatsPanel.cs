@@ -26,8 +26,8 @@ public class StatsPanel : MonoBehaviour
         if (stats)
         {
             hpLabel.text = string.Format("HP {0} / {1}", stats[StatsTypes.HP], stats[StatsTypes.MHP]);
-            hpLabel.text = string.Format("MP {0} / {1}", stats[StatsTypes.MP], stats[StatsTypes.MMP]);
-            hpLabel.text = string.Format("LV. {0}", stats[StatsTypes.LVL]);
+            mpLabel.text = string.Format("MP {0} / {1}", stats[StatsTypes.MP], stats[StatsTypes.MMP]);
+            lvlLabel.text = string.Format("LV. {0}", stats[StatsTypes.LVL]);
         }
     }
 }
