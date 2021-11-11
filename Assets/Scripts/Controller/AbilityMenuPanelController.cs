@@ -52,6 +52,7 @@ public class AbilityMenuPanelController : MonoBehaviour
 
     void Start()
     {
+        canvas.SetActive(true);
         panel.SetPosition(HideKey, false);
         canvas.SetActive(false);
     }

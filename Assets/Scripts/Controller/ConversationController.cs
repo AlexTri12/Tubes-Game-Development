@@ -18,11 +18,7 @@ public class ConversationController : MonoBehaviour
 
     void Start()
     {
-        canvas = GetComponentInChildren<Canvas>();
-        // if (leftPanel.panel.CurrentPosition == null)
-        leftPanel.panel.SetPosition(HideBottom, false);
-        // if (rightPanel.panel.CurrentPosition == null)
-        rightPanel.panel.SetPosition(HideBottom, false);
+        canvas = GetComponentInChildren<Canvas>(true);
         canvas.gameObject.SetActive(false);
     }
 
@@ -31,6 +27,8 @@ public class ConversationController : MonoBehaviour
     public void Show(ConversationData data)
     {
         canvas.gameObject.SetActive(true);
+        leftPanel.panel.SetPosition(HideBottom, false);
+        rightPanel.panel.SetPosition(HideBottom, false);
         conversation = Sequence(data);
         conversation.MoveNext();
     }

@@ -1088,6 +1088,7 @@ GameObject:
   - component: {fileID: 1592162210054577162}
   - component: {fileID: 1592162210062037974}
   - component: {fileID: 3771180630223723203}
+  - component: {fileID: -703330889608753985}
   m_Layer: 0
   m_Name: DogKnight
   m_TagString: Untagged
@@ -1142,6 +1143,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dir: 2
+--- !u!114 &-703330889608753985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592162210054733930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f500479df5bf054a9b08c1bd4723f3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1592162210054733932
 GameObject:
   m_ObjectHideFlags: 0

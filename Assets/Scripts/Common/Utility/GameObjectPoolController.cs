@@ -10,7 +10,7 @@ public class GameObjectPoolController : MonoBehaviour
         {
             if (instance == null)
                 CreateSharedInstance();
-            return Instance;
+            return instance;
         }
     }
     static GameObjectPoolController instance;

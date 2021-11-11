@@ -42,7 +42,7 @@ public class AbilityMenuEntry : MonoBehaviour
             {
                 bullet.sprite = normalSprite;
                 label.color = Color.white;
-                outline.effectColor = new Color(20, 36, 44, 255);
+                outline.effectColor = new Color32(8, 0, 255, 128);
             }
         }
     }

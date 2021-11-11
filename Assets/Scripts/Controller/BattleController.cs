@@ -10,7 +10,6 @@ public class BattleController : StateMachine
     public Transform tileSelectionIndicator;
     public Point pos;
     public GameObject heroPrefab;
-    public Unit currentUnit;
     public AbilityMenuPanelController abilityMenuPanelController;
     public Turn turn = new Turn();
     public List<Unit> units = new List<Unit>();
