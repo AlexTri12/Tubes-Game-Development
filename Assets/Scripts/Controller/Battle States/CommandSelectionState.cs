@@ -29,7 +29,7 @@ public class CommandSelectionState : BaseAbilityMenuState
                 owner.ChangeState<CategorySelectionState>();
                 break;
             case 2:
-                owner.ChangeState<SelectUnitState>();
+                owner.ChangeState<EndFacingState>();
                 break;
         }
     }
