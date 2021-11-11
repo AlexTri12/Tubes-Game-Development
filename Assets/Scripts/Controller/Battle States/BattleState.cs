@@ -39,6 +39,10 @@ public class BattleState : State
     {
         get { return owner.units; }
     }
+    public StatsPanelController statsPanelController
+    {
+        get { return owner.statsPanelController; }
+    }
 
     protected virtual void Awake()
     {
@@ -74,5 +78,30 @@ public class BattleState : State
 
         pos = p;
         tileSelectionIndicator.localPosition = board.tiles[p].center;
+    }
+
+    protected virtual Unit GetUnit(Point p)
+    {
+        Tile t = board.GetTile(p);
+        GameObject content = t != null ? t.content : null;
+        return content != null ? content.GetComponent<Unit>() : null;
+    }
+
+    protected virtual void RefreshPrimaryStatsPanel(Point p)
+    {
+        Unit target = GetUnit(p);
+        if (target != null)
+            statsPanelController.ShowPrimary(target.gameObject);
+        else
+            statsPanelController.HidePrimary();
+    }
+
+    protected virtual void RefreshSecondaryStatsPanel(Point p)
+    {
+        Unit target = GetUnit(p);
+        if (target != null)
+            statsPanelController.ShowSecondary(target.gameObject);
+        else
+            statsPanelController.HideSecondary();
     }
 }

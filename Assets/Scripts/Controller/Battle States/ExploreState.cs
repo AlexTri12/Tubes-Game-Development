@@ -7,21 +7,24 @@ public class ExploreState : BattleState
     protected override void OnMove(object sender, InfoEventArgs<Point> e)
     {
         SelectTile(e.info + pos);
+        RefreshPrimaryStatsPanel(pos);
     }
 
     protected override void OnFire(object sender, InfoEventArgs<int> e)
     {
-        /* 
-        GameObject content = owner.currentTile.content;
-
-        if (content != null)
-        {
-            owner.currentUnit = content.GetComponent<Unit>();
-            owner.ChangeState<MoveTargetBattleState>();
-        }
-        */
-
         if (e.info == 0)
             owner.ChangeState<CommandSelectionState>();
+    }
+
+    public override void Enter()
+    {
+        base.Enter();
+        RefreshPrimaryStatsPanel(pos);
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+        statsPanelController.HidePrimary();
     }
 }

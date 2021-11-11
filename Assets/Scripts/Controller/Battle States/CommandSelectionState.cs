@@ -49,4 +49,16 @@ public class CommandSelectionState : BaseAbilityMenuState
         abilityMenuPanelController.SetLocked(0, turn.hasUnitMoved);
         abilityMenuPanelController.SetLocked(1, turn.hasUnitActed);
     }
+
+    public override void Enter()
+    {
+        base.Enter();
+        statsPanelController.ShowPrimary(turn.actor.gameObject);
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+        statsPanelController.HidePrimary();
+    }
 }

@@ -12,6 +12,7 @@ public class MoveTargetBattleState : BattleState
         Movement mover = turn.actor.GetComponentInChildren<Movement>();
         tiles = mover.GetTilesInRange(board);
         board.SelectTile(tiles);
+        RefreshPrimaryStatsPanel(pos);
     }
 
     public override void Exit()
@@ -19,11 +20,13 @@ public class MoveTargetBattleState : BattleState
         base.Exit();
         board.DeSelectTile(tiles);
         tiles = null;
+        statsPanelController.HidePrimary();
     }
 
     protected override void OnMove(object sender, InfoEventArgs<Point> e)
     {
         SelectTile(e.info + pos);
+        RefreshPrimaryStatsPanel(pos);
     }
 
     protected override void OnFire(object sender, InfoEventArgs<int> e)

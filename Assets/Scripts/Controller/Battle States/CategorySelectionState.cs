@@ -52,4 +52,16 @@ public class CategorySelectionState : BaseAbilityMenuState
         ActionSelectionState.category = index;
         owner.ChangeState<ActionSelectionState>();
     }
+
+    public override void Enter()
+    {
+        base.Enter();
+        statsPanelController.ShowPrimary(turn.actor.gameObject);
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+        statsPanelController.HidePrimary();
+    }
 }

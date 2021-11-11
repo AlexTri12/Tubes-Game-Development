@@ -17,6 +17,7 @@ public class BattleController : StateMachine
     {
         get { return board.GetTile(pos); }
     }
+    public StatsPanelController statsPanelController;
 
     void Start()
     {
