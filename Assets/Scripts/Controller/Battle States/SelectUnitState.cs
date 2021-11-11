@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SelectUnitState : BattleState
 {
-    int index = -1;
-
     public override void Enter()
     {
         base.Enter();
@@ -14,8 +12,8 @@ public class SelectUnitState : BattleState
 
     IEnumerator ChangeCurrentUnit()
     {
-        index = (index + 1) % units.Count;
-        turn.Change(units[index]);
+        owner.round.MoveNext();
+        SelectTile(turn.actor.tile.pos);
         RefreshPrimaryStatsPanel(pos);
         yield return null;
         owner.ChangeState<CommandSelectionState>();

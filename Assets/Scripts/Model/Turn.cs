@@ -11,6 +11,7 @@ public class Turn
     Tile startTile;
     Directions startDir;
     public GameObject ability;
+    public List<Tile> targets;
 
     public void Change(Unit current)
     {

@@ -12,7 +12,7 @@ public class Job : MonoBehaviour
         StatsTypes.DEF,
         StatsTypes.MAT,
         StatsTypes.MDF,
-        StatsTypes.DEF,
+        StatsTypes.SPD
     };
 
     public int[] baseStats = new int[statsOrder.Length];
