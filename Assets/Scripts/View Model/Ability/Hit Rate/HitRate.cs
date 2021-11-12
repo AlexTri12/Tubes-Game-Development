@@ -8,23 +8,30 @@ public abstract class HitRate : MonoBehaviour
     public const string AutomaticMissCheckNotification = "HitRate.automaticMissCheckNotification";
     public const string StatusCheckNotification = "HitRate.statusCheckNotification";
 
-    public abstract int Calculate(Unit attacker, Unit target);
+    protected Unit attacker;
 
-    protected virtual bool AutomaticHit(Unit attacker, Unit target)
+    protected virtual void Start()
+    {
+        attacker = GetComponentInParent<Unit>();
+    }
+
+    public abstract int Calculate(Tile target);
+
+    protected virtual bool AutomaticHit(Unit target)
     {
         MatchExceptions exc = new MatchExceptions(attacker, target);
         this.PostNotification(AutomaticHitCheckNotification, exc);
         return exc.toogle;
     }
 
-    protected virtual bool AutomaticMiss(Unit attacker, Unit target)
+    protected virtual bool AutomaticMiss(Unit target)
     {
         MatchExceptions exc = new MatchExceptions(attacker, target);
         this.PostNotification(AutomaticMissCheckNotification, exc);
         return exc.toogle;
     }
 
-    protected virtual int AdjustForStatusEffects(Unit attacker, Unit target, int rate)
+    protected virtual int AdjustForStatusEffects(Unit target, int rate)
     {
         Info<Unit, Unit, int> args = new Info<Unit, Unit, int>(attacker, target, rate);
         this.PostNotification(StatusCheckNotification, args);
