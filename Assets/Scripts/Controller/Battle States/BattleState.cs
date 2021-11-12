@@ -43,7 +43,10 @@ public class BattleState : State
     {
         get { return owner.statsPanelController; }
     }
-
+    public HitSuccessIndicator hitSuccessIndicator
+    {
+        get { return owner.hitSuccessIndicator; }
+    }
     protected virtual void Awake()
     {
         owner = GetComponent<BattleController>();

@@ -2348,9 +2348,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4675300058442179048}
-  - component: {fileID: 6136108567647782446}
   - component: {fileID: 738114065198428507}
   - component: {fileID: 1310567724414364696}
+  - component: {fileID: 7243733110999677996}
+  - component: {fileID: 3948918084002862788}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Untagged
@@ -2372,20 +2373,6 @@ Transform:
   m_Father: {fileID: 1592162210054577162}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6136108567647782446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632115234004086966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f997e6910c962b44fab30c29212acb47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontal: 5
-  vertical: 2
 --- !u!114 &738114065198428507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2408,6 +2395,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd2fcc60d5d951349ac6a8bbee63763e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7243733110999677996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632115234004086966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee9087b2e6346b489b188e02c4fd7ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 1
+  vertical: 1
+--- !u!114 &3948918084002862788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632115234004086966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4428c0e06ee9e724c95b13bd9ee005e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8486610653524871500

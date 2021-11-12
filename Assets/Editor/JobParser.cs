@@ -39,11 +39,17 @@ public static class JobParser
         for (int i = 1; i < Job.statsOrder.Length + 1; ++i)
             job.baseStats[i - 1] = Convert.ToInt32(elements[i]);
 
+        StatModifierFeature evade = GetFeature(obj, StatsTypes.EVD);
+        evade.amount = Convert.ToInt32(elements[8]);
+
+        StatModifierFeature resistance = GetFeature(obj, StatsTypes.RES);
+        resistance.amount = Convert.ToInt32(elements[9]);
+
         StatModifierFeature move = GetFeature(obj, StatsTypes.MOV);
-        move.amount = Convert.ToInt32(elements[8]);
+        move.amount = Convert.ToInt32(elements[10]);
 
         StatModifierFeature jump = GetFeature(obj, StatsTypes.JMP);
-        jump.amount = Convert.ToInt32(elements[9]);
+        jump.amount = Convert.ToInt32(elements[11]);
     }
 
     static void ParseGrowthStats()
