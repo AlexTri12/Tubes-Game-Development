@@ -13,6 +13,7 @@ public class TurnOrderController : MonoBehaviour
     public const string TurnCheckNotification = "TurnOrderController.turnCheck";
     public const string TurnCompletedNotification = "TurnOrderController.turnCompleted";
     public const string RoundEndedNotification = "TurnOrderController.roundEnded";
+    public const string TurnBeganNotification = "TurnOrderController.turnBeganNotification";
 
     public IEnumerator Round()
     {
@@ -36,6 +37,7 @@ public class TurnOrderController : MonoBehaviour
                 if (CanTakeTurn(units[i]))
                 {
                     bc.turn.Change(units[i]);
+                    units[i].PostNotification(TurnBeganNotification);
                     yield return units[i];
 
                     int cost = turnCost;
