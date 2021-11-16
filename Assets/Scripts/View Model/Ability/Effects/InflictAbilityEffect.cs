@@ -1,35 +1,36 @@
-using System.Collections;
 using UnityEngine;
-using System.Reflection;
+using System.Collections;
 using System;
+using System.Reflection;
 
 public class InflictAbilityEffect : BaseAbilityEffect
 {
-    public string statusName;
-    public int duration;
+	public string statusName;
+	public int duration;
 
-    public override void Apply(Tile target)
-    {
-        Type statusType = Type.GetType(statusName);
-        if (statusType == null || !statusType.IsSubclassOf(typeof(StatusEffect)))
-        {
-            Debug.LogError("Invalid status type");
-            return;
-        }
+	public override int Predict(Tile target)
+	{
+		return 0;
+	}
 
-        MethodInfo mi = typeof(Status).GetMethod("Add");
-        Type[] types = new Type[] { statusType, typeof(DurationStatusCondition) };
-        MethodInfo constructed = mi.MakeGenericMethod(types);
+	protected override int OnApply(Tile target)
+	{
+		Type statusType = Type.GetType(statusName);
+		if (statusType == null || !statusType.IsSubclassOf(typeof(StatusEffect)))
+		{
+			Debug.LogError("Invalid Status Type");
+			return 0;
+		}
 
-        Status status = target.content.GetComponent<Status>();
-        object retValue = constructed.Invoke(status, null);
+		MethodInfo mi = typeof(Status).GetMethod("Add");
+		Type[] types = new Type[] { statusType, typeof(DurationStatusCondition) };
+		MethodInfo constructed = mi.MakeGenericMethod(types);
 
-        DurationStatusCondition condition = retValue as DurationStatusCondition;
-        condition.duration = duration;
-    }
+		Status status = target.content.GetComponent<Status>();
+		object retValue = constructed.Invoke(status, null);
 
-    public override int Predict(Tile target)
-    {
-        return 0;
-    }
+		DurationStatusCondition condition = retValue as DurationStatusCondition;
+		condition.duration = duration;
+		return 0;
+	}
 }

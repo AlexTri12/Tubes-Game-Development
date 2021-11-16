@@ -7,7 +7,6 @@ public class ConfirmAbilityTargetState : BattleState
     List<Tile> tiles;
     AbilityArea aa;
     int index = 0;
-    AbilityEffectTarget[] abilityEffectTargets;
 
     public override void Enter()
     {
@@ -58,17 +57,20 @@ public class ConfirmAbilityTargetState : BattleState
     void FindTargets()
     {
         turn.targets = new List<Tile>();
-        abilityEffectTargets = turn.ability.GetComponentsInChildren<AbilityEffectTarget>();
         for (int i = 0; i < tiles.Count; ++i)
-            if (IsTarget(tiles[i], abilityEffectTargets))
+            if (IsTarget(tiles[i]))
                 turn.targets.Add(tiles[i]);
     }
 
-    bool IsTarget(Tile tile, AbilityEffectTarget[] list)
+    bool IsTarget(Tile tile)
     {
-        for (int i = 0; i < list.Length; ++i)
-            if (list[i].IsTarget(tile))
+        Transform obj = turn.ability.transform;
+        for (int i = 0; i < obj.childCount; ++i)
+        {
+            AbilityEffectTarget targeter = obj.GetChild(i).GetComponent<AbilityEffectTarget>();
+            if (targeter.IsTarget(tile))
                 return true;
+        }
 
         return false;
     }
@@ -93,14 +95,16 @@ public class ConfirmAbilityTargetState : BattleState
         int amount = 0;
         Tile target = turn.targets[index];
 
-        for (int i = 0; i < abilityEffectTargets.Length; ++i)
+        Transform obj = turn.ability.transform;
+        for (int i = 0; i < obj.childCount; ++i)
         {
-            if (abilityEffectTargets[i].IsTarget(target))
+            AbilityEffectTarget targeter = obj.GetChild(i).GetComponent<AbilityEffectTarget>();
+            if (targeter.IsTarget(target))
             {
-                HitRate hitRate = abilityEffectTargets[i].GetComponent<HitRate>();
+                HitRate hitRate = targeter.GetComponent<HitRate>();
                 chance = hitRate.Calculate(target);
 
-                BaseAbilityEffect effect = abilityEffectTargets[i].GetComponent<BaseAbilityEffect>();
+                BaseAbilityEffect effect = targeter.GetComponent<BaseAbilityEffect>();
                 amount = effect.Predict(target);
                 break;
             }

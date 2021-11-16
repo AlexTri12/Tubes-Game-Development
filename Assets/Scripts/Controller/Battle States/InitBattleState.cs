@@ -45,6 +45,11 @@ public class InitBattleState : BattleState
             unit.Place(board.GetTile(p));
             unit.Match();
 
+            instance.AddComponent<Health>();
+            instance.AddComponent<Mana>();
+
+            instance.name = jobs[i];
+
             units.Add(unit);
         }
     }

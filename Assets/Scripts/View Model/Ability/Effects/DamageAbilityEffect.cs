@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class DamageAbilityEffect : BaseAbilityEffect
 {
-    public const string GetAttackNotification = "DamageAbilityEffect.getAttackNotification";
-    public const string GetDefenseNotification = "DamageAbilityEffect.getDefenseNotification";
-    public const string GetPowerNotification = "DamageAbilityEffect.getPowerNotification";
-    public const string TweakDamageNotification = "DamageAbilityEffect.tweakDamageNotification";
-
-    const int minDamage = -999;
-    const int maxDamage = 999;
-
-    public override void Apply(Tile target)
+    protected override int OnApply(Tile target)
     {
         Unit defender = target.content.GetComponent<Unit>();
 
@@ -20,7 +12,7 @@ public class DamageAbilityEffect : BaseAbilityEffect
         int value = Predict(target);
 
         // Add some random variance
-        value *= Mathf.FloorToInt(UnityEngine.Random.Range(0.9f, 1.1f));
+        value = Mathf.FloorToInt(value * UnityEngine.Random.Range(0.9f, 1.1f));
 
         // Clamp the damage to a range
         value = Mathf.Clamp(value, minDamage, maxDamage);
@@ -28,6 +20,7 @@ public class DamageAbilityEffect : BaseAbilityEffect
         // Apply the damage to the target
         Stats s = defender.GetComponent<Stats>();
         s[StatsTypes.HP] -= value;
+        return value;
     }
 
     public override int Predict(Tile target)
@@ -58,21 +51,5 @@ public class DamageAbilityEffect : BaseAbilityEffect
         // Clamp the damage to a range
         damage = Mathf.Clamp(damage, minDamage, maxDamage);
         return damage;
-    }
-
-    int GetStats(Unit attacker, Unit target, string notification, int startValue)
-    {
-        var mods = new List<ValueModifier>();
-        var info = new Info<Unit, Unit, List<ValueModifier>>(attacker, target, mods);
-        this.PostNotification(notification, info);
-        mods.Sort();
-
-        float value = startValue;
-        for (int i = 0; i < mods.Count; ++i)
-            value = mods[i].Modify(startValue, value);
-
-        int retValue = Mathf.FloorToInt(value);
-        retValue = Mathf.Clamp(retValue, minDamage, maxDamage);
-        return retValue;
     }
 }
