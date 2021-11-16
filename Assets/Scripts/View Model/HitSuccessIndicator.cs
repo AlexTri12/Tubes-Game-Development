@@ -23,7 +23,8 @@ public class HitSuccessIndicator : MonoBehaviour
     public void SetStats(int chance, int amount)
     {
         arrow.fillAmount = (chance / 100f);
-        label.text = string.Format("{0}% {1}pt(s)", chance, amount);
+        label.text = string.Format("{0}% {1}pt(s)", chance, Mathf.Abs(amount));
+        label.color = amount > 0 ? Color.green : Color.red;
     }
 
     public void Show()
@@ -35,7 +36,7 @@ public class HitSuccessIndicator : MonoBehaviour
     public void Hide()
     {
         SetPanelPos(HideKey);
-        transition.easingControl.completedEvent += delegate (object sender, System.EventArgs e)
+        transition.completedEvent += delegate (object sender, System.EventArgs e)
         {
             canvas.gameObject.SetActive(false);
         };
@@ -43,11 +44,11 @@ public class HitSuccessIndicator : MonoBehaviour
 
     void SetPanelPos(string pos)
     {
-        if (transition != null && transition.easingControl.IsPlaying)
-            transition.easingControl.Stop();
+        if (transition != null && transition.IsPlaying)
+            transition.Stop();
 
         transition = panel.SetPosition(pos, true);
-        transition.easingControl.duration = 0.5f;
-        transition.easingControl.equation = EasingEquations.EaseInOutQuad;
+        transition.duration = 0.5f;
+        transition.equation = EasingEquations.EaseInOutQuad;
     }
 }

@@ -55,13 +55,13 @@ public abstract class Movement : MonoBehaviour
         TransformLocalEulerTweener t = (TransformLocalEulerTweener)transform.RotateToLocal(dir.ToEuler(), 0.25f, EasingEquations.EaseInOutQuad);
 
         // When rotating between North and Weat, we must make an exception so it look like the unit rotates the most efficient way
-        if (Mathf.Approximately(t.startValue.y, 0f) && Mathf.Approximately(t.endValue.y, 270f))
+        if (Mathf.Approximately(t.startTweenValue.y, 0f) && Mathf.Approximately(t.endTweenValue.y, 270f))
         {
-            t.startValue = new Vector3(t.startValue.x, 360f, t.startValue.z);
+            t.startTweenValue = new Vector3(t.startTweenValue.x, 360f, t.startTweenValue.z);
         }
-        else if (Mathf.Approximately(t.startValue.y, 270f) && Mathf.Approximately(t.endValue.y, 0))
+        else if (Mathf.Approximately(t.startTweenValue.y, 270f) && Mathf.Approximately(t.endTweenValue.y, 0))
         {
-            t.endValue = new Vector3(t.startValue.x, 360f, t.startValue.z);
+            t.endTweenValue = new Vector3(t.startTweenValue.x, 360f, t.startTweenValue.z);
         }
 
         unit.dir = dir;

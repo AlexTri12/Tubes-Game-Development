@@ -60,8 +60,8 @@ public class AbilityMenuPanelController : MonoBehaviour
     Tweener TooglePos(string pos)
     {
         Tweener t = panel.SetPosition(pos, true);
-        t.easingControl.duration = 0.5f;
-        t.easingControl.equation = EasingEquations.EaseOutQuad;
+        t.duration = 0.5f;
+        t.equation = EasingEquations.EaseOutQuad;
         return t;
     }
 
@@ -133,7 +133,7 @@ public class AbilityMenuPanelController : MonoBehaviour
     public void Hide()
     {
         Tweener t = TooglePos(HideKey);
-        t.easingControl.completedEvent += delegate (object sender, System.EventArgs s)
+        t.completedEvent += delegate (object sender, System.EventArgs s)
         {
             if (panel.CurrentPosition == panel[HideKey])
             {

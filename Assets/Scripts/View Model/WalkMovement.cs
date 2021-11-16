@@ -60,9 +60,9 @@ public class WalkMovement : Movement
     {
         Tweener tweener = transform.MoveTo(target.center, 0.5f, EasingEquations.Linear);
 
-        Tweener tweener2 = jumper.MoveToLocal(new Vector3(0, Tile.stepHeight * 2f, 0), tweener.easingControl.duration / 2f, EasingEquations.EaseOutQuad);
-        tweener2.easingControl.loopCount = 1;
-        tweener2.easingControl.loopType = EasingControl.LoopType.PingPong;
+        Tweener tweener2 = jumper.MoveToLocal(new Vector3(0, Tile.stepHeight * 2f, 0), tweener.duration / 2f, EasingEquations.EaseOutQuad);
+        tweener2.loopCount = 1;
+        tweener2.loopType = EasingControl.LoopType.PingPong;
 
         while (tweener != null)
             yield return null;
