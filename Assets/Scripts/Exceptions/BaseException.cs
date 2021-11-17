@@ -9,7 +9,7 @@ public class BaseException
         get;
         private set;
     }
-    private bool defaultToogle;
+    public bool defaultToogle;
 
     public BaseException(bool defaultToogle)
     {

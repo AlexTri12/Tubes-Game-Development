@@ -11,7 +11,6 @@ public class CutSceneState : BattleState
     {
         base.Awake();
         conversationController = owner.GetComponentInChildren<ConversationController>();
-        data = Resources.Load<ConversationData>("Conversations/Tutorial");
     }
 
     protected override void OnDestroy()
@@ -24,6 +23,17 @@ public class CutSceneState : BattleState
     public override void Enter()
     {
         base.Enter();
+        if (IsBattleOver())
+        {
+            if (DidPlayerWin())
+                data = Resources.Load<ConversationData>("Conversations/OutroSceneWin");
+            else
+                data = Resources.Load<ConversationData>("Conversations/OutroSceneLose");
+        }
+        else
+        {
+            data = Resources.Load<ConversationData>("Conversations/Tutorial");
+        }
         conversationController.Show(data);
     }
 
@@ -47,6 +57,9 @@ public class CutSceneState : BattleState
 
     void OnCompleteConversation(object sender, System.EventArgs eventArgs)
     {
-        owner.ChangeState<SelectUnitState>();
+        if (IsBattleOver())
+            owner.ChangeState<EndBattleState>();
+        else
+            owner.ChangeState<SelectUnitState>();
     }
 }

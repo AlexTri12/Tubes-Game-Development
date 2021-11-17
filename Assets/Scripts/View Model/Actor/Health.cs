@@ -14,6 +14,7 @@ public class Health : MonoBehaviour
         get { return stats[StatsTypes.MHP]; }
         set { stats[StatsTypes.MHP] = value; }
     }
+    public int MinHP = 0;
     Stats stats;
 
     private void Awake()
@@ -36,7 +37,7 @@ public class Health : MonoBehaviour
     void OnHPWillChange(object sender, object args)
     {
         ValueChangeException vce = args as ValueChangeException;
-        vce.AddModifier(new ClampValueModifier(int.MaxValue, 0, stats[StatsTypes.MHP]));
+        vce.AddModifier(new ClampValueModifier(int.MaxValue, MinHP, stats[StatsTypes.MHP]));
     }
 
     void OnMHPDidChange(object sender, object args)
@@ -45,6 +46,6 @@ public class Health : MonoBehaviour
         if (MHP > oldMHP)
             HP += MHP - oldMHP;
         else
-            HP = Mathf.Clamp(HP, 0, MHP);
+            HP = Mathf.Clamp(HP, MinHP, MHP);
     }
 }

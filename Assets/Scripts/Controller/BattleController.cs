@@ -14,6 +14,7 @@ public class BattleController : StateMachine
     public List<Unit> units = new List<Unit>();
     public IEnumerator round;
     public HitSuccessIndicator hitSuccessIndicator;
+    public FacingIndicator facingIndicator;
 
     public Tile currentTile
     {

@@ -50,5 +50,11 @@ public class InitBattleState : BattleState
         }
 
         SelectTile(units[0].tile.pos);
+        AddVictoryCondition();
+    }
+
+    void AddVictoryCondition()
+    {
+        DefeatAllEnemiesVictoryCondition vc = owner.gameObject.AddComponent<DefeatAllEnemiesVictoryCondition>();
     }
 }

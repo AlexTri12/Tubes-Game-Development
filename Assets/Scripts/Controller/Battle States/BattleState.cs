@@ -107,4 +107,14 @@ public class BattleState : State
         else
             statsPanelController.HideSecondary();
     }
+
+    protected virtual bool DidPlayerWin()
+    {
+        return owner.GetComponent<BaseVictoryCondition>().Victor == Alliances.Hero;
+    }
+
+    protected virtual bool IsBattleOver()
+    {
+        return owner.GetComponent<BaseVictoryCondition>().Victor != Alliances.None;
+    }
 }

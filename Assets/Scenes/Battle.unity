@@ -546,6 +546,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5747717370754961950, guid: 238de4cda327f9a48b419beeb5c45995, type: 3}
   m_PrefabInstance: {fileID: 1239538317}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1239538319 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2723438015001989459, guid: 238de4cda327f9a48b419beeb5c45995, type: 3}
+  m_PrefabInstance: {fileID: 1239538317}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd7807947ced6444826f085f152268d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1287752599
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,6 +568,7 @@ GameObject:
   - component: {fileID: 1287752602}
   - component: {fileID: 1287752601}
   - component: {fileID: 1287752600}
+  - component: {fileID: 1287752603}
   m_Layer: 0
   m_Name: Battle Controller
   m_TagString: Untagged
@@ -595,10 +607,10 @@ MonoBehaviour:
   pos:
     x: 0
     y: 0
-  heroPrefab: {fileID: 1592162210054733930, guid: b87c568ae1a716c499ce45c73d192693, type: 3}
   abilityMenuPanelController: {fileID: 342779736}
   units: []
   hitSuccessIndicator: {fileID: 226519157}
+  facingIndicator: {fileID: 1239538319}
   statsPanelController: {fileID: 706990949}
 --- !u!4 &1287752602
 Transform:
@@ -621,6 +633,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1287752603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287752599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b63c08f04b16143ba872c3481d5a55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1415819586
 GameObject:
   m_ObjectHideFlags: 0
