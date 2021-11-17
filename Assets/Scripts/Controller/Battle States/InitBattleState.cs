@@ -23,34 +23,32 @@ public class InitBattleState : BattleState
 
     void SpawnTestUnits()
     {
-        string[] jobs = new string[] { "Warrior", "Wizard" };
-        for (int i = 0; i < jobs.Length; ++i)
+        string[] recipes = new string[]
         {
-            GameObject instance = Instantiate(owner.heroPrefab) as GameObject;
+            "Warrior",
+            "Mage",
+            "Slime",
+            "Turtle Shell"
+        };
+        List<Tile> locations = new List<Tile>(board.tiles.Values);
 
-            Stats s = instance.AddComponent<Stats>();
-            s[StatsTypes.LVL] = 1;
+        for (int i = 0; i < recipes.Length; ++i)
+        {
+            int level = UnityEngine.Random.Range(1, 3);
+            GameObject instance = UnitFactory.Create(recipes[i], level);
 
-            GameObject jobPrefab = Resources.Load<GameObject>("Jobs/" + jobs[i]);
-            GameObject jobInstance = Instantiate(jobPrefab) as GameObject;
-            jobInstance.transform.SetParent(instance.transform);
-
-            Job job = jobInstance.GetComponent<Job>();
-            job.Employ();
-            job.LoadDefaultStats();
-
-            Point p = new Point((int)levelData.tiles[i].x, (int)levelData.tiles[i].z);
+            int random = UnityEngine.Random.Range(0, locations.Count);
+            Tile randomTile = locations[random];
+            locations.RemoveAt(random);
 
             Unit unit = instance.GetComponent<Unit>();
-            unit.Place(board.GetTile(p));
+            unit.Place(randomTile);
+            unit.dir = (Directions)UnityEngine.Random.Range(0, 4);
             unit.Match();
-
-            instance.AddComponent<Health>();
-            instance.AddComponent<Mana>();
-
-            instance.name = jobs[i];
 
             units.Add(unit);
         }
+
+        SelectTile(units[0].tile.pos);
     }
 }
