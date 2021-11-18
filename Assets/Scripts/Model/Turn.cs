@@ -13,6 +13,7 @@ public class Turn
     public Ability ability;
     public List<Tile> targets;
     public PlanOfAttack plan;
+    public UnitAnimation animation;
 
     public void Change(Unit current)
     {
@@ -23,6 +24,8 @@ public class Turn
         startTile = actor.tile;
         startDir = actor.dir;
         plan = null;
+        animation = actor.GetComponent<UnitAnimation>();
+        animation.IdleState();
     }
 
     public void UndoMove()

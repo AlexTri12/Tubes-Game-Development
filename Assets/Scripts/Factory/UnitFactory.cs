@@ -34,6 +34,7 @@ public static class UnitFactory
         AddAbilityCatalog(obj, recipe.abilityCatalog);
         AddAlliance(obj, recipe.alliance);
         AddAttackPattern(obj, recipe.strategy);
+        obj.AddComponent<UnitAnimation>();
         return obj;
     }
 

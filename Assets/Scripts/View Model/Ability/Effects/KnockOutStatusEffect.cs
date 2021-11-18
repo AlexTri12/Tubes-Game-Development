@@ -15,16 +15,15 @@ public class KnockOutStatusEffect : StatusEffect
 
     private void OnEnable()
     {
-        // Add dead animation
-        owner.transform.localScale = new Vector3(0.75f, 0.1f, 0.75f);
+        owner.GetComponent<UnitAnimation>().IdleState();
+        owner.GetComponent<UnitAnimation>().Die();
         this.AddObserver(OnTurnCheck, TurnOrderController.TurnCheckNotification, owner);
         this.AddObserver(OnStatsCounterWillChange, Stats.WillChangeNotifications(StatsTypes.CTR), stats);
     }
 
     private void OnDisable()
     {
-        // Add revive animation
-        owner.transform.localScale = Vector3.one;
+        owner.GetComponent<UnitAnimation>().Revive();
         this.RemoveObserver(OnTurnCheck, TurnOrderController.TurnCheckNotification, owner);
         this.RemoveObserver(OnStatsCounterWillChange, Stats.WillChangeNotifications(StatsTypes.CTR), stats);
     }

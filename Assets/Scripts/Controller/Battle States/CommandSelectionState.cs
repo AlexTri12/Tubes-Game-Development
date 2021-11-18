@@ -29,6 +29,10 @@ public class CommandSelectionState : BaseAbilityMenuState
                 owner.ChangeState<CategorySelectionState>();
                 break;
             case 2:
+                turn.animation.Defend();
+                owner.ChangeState<EndFacingState>();
+                break;
+            case 3:
                 owner.ChangeState<EndFacingState>();
                 break;
         }
@@ -42,18 +46,21 @@ public class CommandSelectionState : BaseAbilityMenuState
             menuOptions = new List<string>(3);
             menuOptions.Add("Move");
             menuOptions.Add("Action");
+            menuOptions.Add("Defend");
             menuOptions.Add("Wait");
         }
 
         abilityMenuPanelController.Show(menuTitle, menuOptions);
         abilityMenuPanelController.SetLocked(0, turn.hasUnitMoved);
         abilityMenuPanelController.SetLocked(1, turn.hasUnitActed);
+        abilityMenuPanelController.SetLocked(2, turn.hasUnitActed);
     }
 
     public override void Enter()
     {
         base.Enter();
         statsPanelController.ShowPrimary(turn.actor.gameObject);
+        turn.animation.IdleState();
 
         if (driver.Current == Drivers.Computer)
             StartCoroutine(ComputerTurn());
