@@ -12,6 +12,7 @@ public class Turn
     Directions startDir;
     public Ability ability;
     public List<Tile> targets;
+    public PlanOfAttack plan;
 
     public void Change(Unit current)
     {
@@ -21,6 +22,7 @@ public class Turn
         lockMove = false;
         startTile = actor.tile;
         startDir = actor.dir;
+        plan = null;
     }
 
     public void UndoMove()

@@ -13,6 +13,9 @@ public class EndFacingState : BattleState
         SelectTile(turn.actor.tile.pos);
         owner.facingIndicator.gameObject.SetActive(true);
         owner.facingIndicator.SetDirection(startDir);
+
+        if (driver.Current == Drivers.Computer)
+            StartCoroutine(ComputerControl());
     }
 
     protected override void OnMove(object sender, InfoEventArgs<Point> e)
@@ -28,7 +31,6 @@ public class EndFacingState : BattleState
         {
             case 0:
                 owner.ChangeState<SelectUnitState>();
-                owner.facingIndicator.gameObject.SetActive(false);
                 break;
             case 1:
                 turn.actor.dir = startDir;
@@ -36,5 +38,21 @@ public class EndFacingState : BattleState
                 owner.ChangeState<CommandSelectionState>();
                 break;
         }
+    }
+
+    IEnumerator ComputerControl()
+    {
+        yield return new WaitForSeconds(0.5f);
+        turn.actor.dir = owner.cpu.DetermineEndFacingDirection();
+        turn.actor.Match();
+        owner.facingIndicator.SetDirection(turn.actor.dir);
+        yield return new WaitForSeconds(0.5f);
+        owner.ChangeState<SelectUnitState>();
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+        owner.facingIndicator.gameObject.SetActive(false);
     }
 }

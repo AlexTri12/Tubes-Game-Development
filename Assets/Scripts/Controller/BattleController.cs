@@ -13,14 +13,16 @@ public class BattleController : StateMachine
     public Turn turn = new Turn();
     public List<Unit> units = new List<Unit>();
     public IEnumerator round;
+    public StatsPanelController statsPanelController;
     public HitSuccessIndicator hitSuccessIndicator;
     public FacingIndicator facingIndicator;
+    public BattleMessageController bmc;
+    public ComputerPlayer cpu;
 
     public Tile currentTile
     {
         get { return board.GetTile(pos); }
     }
-    public StatsPanelController statsPanelController;
 
     void Start()
     {

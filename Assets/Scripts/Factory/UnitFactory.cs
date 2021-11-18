@@ -33,6 +33,7 @@ public static class UnitFactory
         AddAttack(obj, recipe.attack);
         AddAbilityCatalog(obj, recipe.abilityCatalog);
         AddAlliance(obj, recipe.alliance);
+        AddAttackPattern(obj, recipe.strategy);
         return obj;
     }
 
@@ -126,6 +127,21 @@ public static class UnitFactory
                 ability.name = recipe.categories[i].entries[j];
                 ability.transform.SetParent(category.transform);
             }
+        }
+    }
+
+    static void AddAttackPattern(GameObject obj, string name)
+    {
+        Driver driver = obj.AddComponent<Driver>();
+        if (string.IsNullOrEmpty(name))
+        {
+            driver.normal = Drivers.Human;
+        }
+        else
+        {
+            driver.normal = Drivers.Computer;
+            GameObject instance = InstantiatePrefab("Attack Pattern/" + name);
+            instance.transform.SetParent(obj.transform);
         }
     }
 }

@@ -9,7 +9,10 @@ public abstract class HitRate : MonoBehaviour
     public const string StatusCheckNotification = "HitRate.statusCheckNotification";
 
     protected Unit attacker;
-
+    public virtual bool IsAngleBased
+    {
+        get { return true; }
+    }
     protected virtual void Start()
     {
         attacker = GetComponentInParent<Unit>();
