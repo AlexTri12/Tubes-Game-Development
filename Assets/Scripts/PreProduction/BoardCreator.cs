@@ -8,11 +8,14 @@ public class BoardCreator : MonoBehaviour
 {
     [SerializeField] GameObject tilePrefab;
     [SerializeField] GameObject tileSelectionPrefab;
-    [SerializeField] int width = 10;
-    [SerializeField] int depth = 10;
-    [SerializeField] int height = 10;
+    [SerializeField] int maxWidthBoard = 10;
+    [SerializeField] int maxDepthBoard = 10;
+    [SerializeField] int maxHeight = 10;
     [SerializeField] Point pos;
-    [SerializeField] LevelData levelData;
+    [SerializeField] int widthRect;
+    [SerializeField] int depthRect;
+    [SerializeField] LevelData loadLevelData;
+    [SerializeField] string saveName;
 
     Transform marker
     {
@@ -30,24 +33,48 @@ public class BoardCreator : MonoBehaviour
 
     Dictionary<Point, Tile> tiles = new Dictionary<Point, Tile>();
 
-    public void GrowArea()
+    public void GrowAreaRandom()
     {
         Rect r = RandomRect();
         GrowRect(r);
     }
 
-    public void ShrinkArea()
+    public void ShrinkAreaRandom()
     {
         Rect r = RandomRect();
         ShrinkRect(r);
     }
 
+    public void GrowAreaAll()
+    {
+        Rect r = new Rect(0, 0, maxWidthBoard, maxDepthBoard);
+        GrowRect(r);
+    }
+
+    public void ShrinkAreaAll()
+    {
+        Rect r = new Rect(0, 0, maxWidthBoard, maxDepthBoard);
+        ShrinkRect(r);
+    }
+
+    public void GrowAreaRect()
+    {
+        Rect r = new Rect(pos.x, pos.y, widthRect, depthRect);
+        GrowRect(r);
+    }
+
+    public void ShrinkAreaRect()
+    {
+        Rect r = new Rect(pos.x, pos.y, widthRect, depthRect);
+        ShrinkRect(r);
+    }
+
     Rect RandomRect()
     {
-        int x = UnityEngine.Random.Range(0, width);
-        int y = UnityEngine.Random.Range(0, depth);
-        int w = UnityEngine.Random.Range(1, width - x + 1);
-        int h = UnityEngine.Random.Range(1, depth - y + 1);
+        int x = UnityEngine.Random.Range(0, maxWidthBoard);
+        int y = UnityEngine.Random.Range(0, maxDepthBoard);
+        int w = UnityEngine.Random.Range(1, maxWidthBoard - x + 1);
+        int h = UnityEngine.Random.Range(1, maxDepthBoard - y + 1);
         return new Rect(x, y, w, h);
     }
 
@@ -97,7 +124,7 @@ public class BoardCreator : MonoBehaviour
     void GrowSingle(Point p)
     {
         Tile t = GetOrCreate(p);
-        if (t.height < height)
+        if (t.height < maxHeight)
             t.Grow();
     }
 
@@ -150,7 +177,7 @@ public class BoardCreator : MonoBehaviour
         foreach (Tile t in tiles.Values)
             board.tiles.Add( new Vector3(t.pos.x, t.height, t.pos.y) );
 
-        string fileName = string.Format("Assets/Resources/Levels/{1}.asset", filePath, name);
+        string fileName = string.Format("Assets/Resources/Levels/{1}.asset", filePath, saveName);
         AssetDatabase.CreateAsset(board, fileName);
     }
 
@@ -168,10 +195,10 @@ public class BoardCreator : MonoBehaviour
     public void Load()
     {
         Clear();
-        if (levelData == null)
+        if (loadLevelData == null)
             return;
 
-        foreach (Vector3 v in levelData.tiles)
+        foreach (Vector3 v in loadLevelData.tiles)
         {
             Tile t = Create();
             t.Load(v);

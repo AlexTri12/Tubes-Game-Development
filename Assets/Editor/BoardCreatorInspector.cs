@@ -25,10 +25,18 @@ public class BoardCreatorInspector : Editor
             current.Grow();
         if (GUILayout.Button("Shrink"))
             current.Shrink();
-        if (GUILayout.Button("GrowArea"))
-            current.GrowArea();
-        if (GUILayout.Button("Shrink Area"))
-            current.ShrinkArea();
+        if (GUILayout.Button("Grow Area Random"))
+            current.GrowAreaRandom();
+        if (GUILayout.Button("Shrink Area Random"))
+            current.ShrinkAreaRandom();
+        if (GUILayout.Button("Grow Area All"))
+            current.GrowAreaAll();
+        if (GUILayout.Button("Shrink Area All"))
+            current.ShrinkAreaAll();
+        if (GUILayout.Button("Grow Area Rect"))
+            current.GrowAreaRect();
+        if (GUILayout.Button("Shrink Area Rect"))
+            current.ShrinkAreaRect();
         if (GUILayout.Button("Save"))
             current.Save();
         if (GUILayout.Button("Load"))
