@@ -36,7 +36,12 @@ public class Board : MonoBehaviour
 
         for (int i = 0; i < data.tiles.Count; ++i)
         {
-            GameObject instance = Instantiate(tilePrefab) as GameObject;
+            GameObject instance;
+            if (i < data.tilePrefabsName.Count && data.tilePrefabsName[i] != "")
+                instance = Instantiate(Resources.Load("Tiles/" + data.tilePrefabsName[i])) as GameObject;
+            else
+                instance = Instantiate(tilePrefab) as GameObject;
+
             instance.transform.SetParent(transform);
 
             Tile t = instance.GetComponent<Tile>();

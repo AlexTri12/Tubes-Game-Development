@@ -259,6 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 941773358644478636}
   - component: {fileID: 4929735375992261885}
+  - component: {fileID: 4437722801716716017}
   m_Layer: 0
   m_Name: LichMage
   m_TagString: Untagged
@@ -300,6 +301,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4437722801716716017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2653519054846999690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc531db4f58df348a684ae40d78f25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dir: 0
+  avatar: {fileID: 21300000, guid: dbcee433328e75845b6348a890c76240, type: 3}
 --- !u!1 &2966587206667862302
 GameObject:
   m_ObjectHideFlags: 0

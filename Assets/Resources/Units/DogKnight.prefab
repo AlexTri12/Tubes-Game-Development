@@ -1087,6 +1087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1592162210054577162}
   - component: {fileID: 1592162210062037974}
+  - component: {fileID: -6124255568942203530}
   m_Layer: 0
   m_Name: DogKnight
   m_TagString: Untagged
@@ -1128,6 +1129,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-6124255568942203530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592162210054733930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc531db4f58df348a684ae40d78f25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dir: 0
+  avatar: {fileID: 21300000, guid: b321cc06588516743a5b2f17064d2631, type: 3}
 --- !u!1 &1592162210054733932
 GameObject:
   m_ObjectHideFlags: 0

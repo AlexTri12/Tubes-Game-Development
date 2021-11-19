@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: Slime
   job: Warrior
-  attack: MeleeAttack
+  attack: Melee Attack
   abilityCatalog: Slime
   locomotion: 0
   alliance: 4

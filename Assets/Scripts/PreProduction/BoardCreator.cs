@@ -115,6 +115,7 @@ public class BoardCreator : MonoBehaviour
             return tiles[p];
 
         Tile t = Create();
+        t.tilePrefabName = tilePrefab.name;
         t.Load(p, 0);
         tiles.Add(p, t);
 
@@ -174,8 +175,12 @@ public class BoardCreator : MonoBehaviour
 
         LevelData board = ScriptableObject.CreateInstance<LevelData>();
         board.tiles = new List<Vector3>(tiles.Count);
+        board.tilePrefabsName = new List<string>(tiles.Count);
         foreach (Tile t in tiles.Values)
-            board.tiles.Add( new Vector3(t.pos.x, t.height, t.pos.y) );
+        {
+            board.tiles.Add(new Vector3(t.pos.x, t.height, t.pos.y));
+            board.tilePrefabsName.Add(t.tilePrefabName);
+        }
 
         string fileName = string.Format("Assets/Resources/Levels/{1}.asset", filePath, saveName);
         AssetDatabase.CreateAsset(board, fileName);
@@ -198,11 +203,23 @@ public class BoardCreator : MonoBehaviour
         if (loadLevelData == null)
             return;
 
-        foreach (Vector3 v in loadLevelData.tiles)
+        for (int i = 0; i < loadLevelData.tiles.Count; ++i)
         {
-            Tile t = Create();
-            t.Load(v);
+            Tile t;
+            if (i < loadLevelData.tilePrefabsName.Count && loadLevelData.tilePrefabsName[i] != "")
+                t = CreateWithDesignatedPrefab(loadLevelData.tilePrefabsName[i]);
+            else
+                t = Create();
+
+            t.Load(loadLevelData.tiles[i]);
             tiles.Add(t.pos, t);
         }
+    }
+
+    Tile CreateWithDesignatedPrefab(string prefabName)
+    {
+        GameObject instance = Instantiate(Resources.Load("Tiles/" + prefabName)) as GameObject;
+        instance.transform.parent = transform;
+        return instance.GetComponent<Tile>();
     }
 }

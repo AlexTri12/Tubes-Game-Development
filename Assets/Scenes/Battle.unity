@@ -636,7 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraRig: {fileID: 1040893136}
   board: {fileID: 317216907}
-  levelData: {fileID: 11400000, guid: 36c026e54d05f4b4aab8317272fbf379, type: 2}
+  levelData: {fileID: 11400000, guid: 19c96f0fd3497024e92f85e111e6a224, type: 2}
   tileSelectionIndicator: {fileID: 1239538318}
   pos:
     x: 0
@@ -1158,9 +1158,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4485552720055927447, guid: c71ff671c984ed848b528d03f47a89f6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 4485552719386260283, guid: c71ff671c984ed848b528d03f47a89f6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485552719761546051, guid: c71ff671c984ed848b528d03f47a89f6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c71ff671c984ed848b528d03f47a89f6, type: 3}

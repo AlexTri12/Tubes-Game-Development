@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: LichMage
   job: Wizard
-  attack: MeleeAttack
+  attack: Melee Attack
   abilityCatalog: Black Mage
   locomotion: 2
   alliance: 2
+  strategy: 

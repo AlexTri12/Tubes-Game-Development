@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2389013960909497115}
   - component: {fileID: 8862194939197682573}
-  - component: {fileID: 1910738728670394846}
   - component: {fileID: 4468734119137071153}
+  - component: {fileID: 2515126795035414787}
   m_Layer: 0
   m_Name: Damage
   m_TagString: Untagged
@@ -45,18 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4428c0e06ee9e724c95b13bd9ee005e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1910738728670394846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2673422373019618914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60a018bb27a986541810c7ab8dd1c34c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4468734119137071153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +55,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c10bbbe345937242a29c8a1fb192c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2515126795035414787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2673422373019618914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bee3fa716eb12545bdbd025886223c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6365865634599145486
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 1946915679945877061}
   - component: {fileID: 7805380403521849326}
   m_Layer: 0
-  m_Name: RangedAttack
+  m_Name: Melee Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,8 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee9087b2e6346b489b188e02c4fd7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal: 4
-  vertical: 2
+  horizontal: 1
+  vertical: 1
 --- !u!114 &565591452338748274
 MonoBehaviour:
   m_ObjectHideFlags: 0

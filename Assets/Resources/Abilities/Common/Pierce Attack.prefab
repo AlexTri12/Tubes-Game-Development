@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 7213594630867742544}
   - component: {fileID: 8160358334905569829}
   m_Layer: 0
-  m_Name: SpearAttack
+  m_Name: Pierce Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

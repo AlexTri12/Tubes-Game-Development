@@ -10,6 +10,7 @@ public class Unit : MonoBehaviour
         protected set;
     }
     public Directions dir;
+    public Sprite avatar;
 
     public void Place(Tile target)
     {

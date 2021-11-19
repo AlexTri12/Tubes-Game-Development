@@ -16,14 +16,14 @@ MonoBehaviour:
   - messages:
     - Hello semuanya
     - Ini tutorial
-    speaker: {fileID: 21300000, guid: 145978568a150f04d8993c85247a1d7b, type: 3}
+    speaker: {fileID: 21300000, guid: b321cc06588516743a5b2f17064d2631, type: 3}
     anchor: 8
   - messages:
-    - Klik kiri untuk confirm
-    - Klik kanan untuk cancel
-    speaker: {fileID: 21300000, guid: 145978568a150f04d8993c85247a1d7b, type: 3}
+    - Klik kiri atau enter untuk confirm
+    - Klik kanan atau backspace untuk cancel
+    speaker: {fileID: 21300000, guid: dbcee433328e75845b6348a890c76240, type: 3}
     anchor: 0
   - messages:
-    - Selamat bermain :)
-    speaker: {fileID: 21300000, guid: 145978568a150f04d8993c85247a1d7b, type: 3}
+    - Mari kita bertarung
+    speaker: {fileID: 21300000, guid: a0e06a93a5e8f6d40b4a5ed80441ec41, type: 3}
     anchor: 2

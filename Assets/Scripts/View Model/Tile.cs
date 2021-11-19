@@ -9,6 +9,7 @@ public class Tile : MonoBehaviour
     public int height;
 
     public GameObject content;
+    public string tilePrefabName;
     [HideInInspector] public Tile prev;
     [HideInInspector] public int distance;
 

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: DogKnight
   job: Warrior
-  attack: MeleeAttack
+  attack: Melee Attack
   abilityCatalog: Knight
   locomotion: 0
   alliance: 2
+  strategy: 

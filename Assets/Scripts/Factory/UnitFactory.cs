@@ -21,7 +21,6 @@ public static class UnitFactory
     {
         GameObject obj = InstantiatePrefab("Units/" + recipe.model);
         obj.name = recipe.name;
-        obj.AddComponent<Unit>();
         AddStats(obj);
         AddLocomotion(obj, recipe.locomotion);
         obj.AddComponent<Status>();
@@ -100,6 +99,7 @@ public static class UnitFactory
     static void AddAttack(GameObject obj, string name)
     {
         GameObject instance = InstantiatePrefab("Abilities/Common/" + name);
+        instance.name = name;
         instance.transform.SetParent(obj.transform);
     }
 
