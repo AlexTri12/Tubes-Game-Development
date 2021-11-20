@@ -6,6 +6,7 @@ public class MusicPlayer : MonoBehaviour
 {
     public AudioClip introClip;
     public AudioClip loopClip;
+
     public AudioSequence sequence
     {
         get;

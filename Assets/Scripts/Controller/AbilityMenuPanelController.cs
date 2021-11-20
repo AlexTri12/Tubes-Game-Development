@@ -112,7 +112,13 @@ public class AbilityMenuPanelController : MonoBehaviour
         for (int i = 0; i < options.Count; ++i)
         {
             AbilityMenuEntry entry = Dequeue();
-            entry.Title = options[i];
+            string[] abilityName = options[i].Split('~');
+            entry.Title = abilityName[0];
+            if (abilityName.Length > 1)
+                entry.ManaCost = abilityName[1];
+            else
+                entry.ManaCost = "";
+
             menuEntries.Add(entry);
         }
 

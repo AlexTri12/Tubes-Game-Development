@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee9087b2e6346b489b188e02c4fd7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal: 4
+  horizontal: 3
   vertical: 2
 --- !u!114 &5420690408762419613
 MonoBehaviour:
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2e656ca441d654884c149734e4af3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 12
+  amount: 24
 --- !u!114 &8320913721343216057
 MonoBehaviour:
   m_ObjectHideFlags: 0

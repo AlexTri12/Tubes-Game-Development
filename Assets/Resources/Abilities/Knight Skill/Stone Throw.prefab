@@ -82,7 +82,6 @@ GameObject:
   - component: {fileID: 8346652942608365097}
   - component: {fileID: 9048279342763053012}
   - component: {fileID: 922166502817959042}
-  - component: {fileID: -2722561645738348928}
   m_Layer: 0
   m_Name: Stone Throw
   m_TagString: Untagged
@@ -155,17 +154,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67aec760a1131b649828d38c837c9965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
---- !u!114 &-2722561645738348928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4233974707243297664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e2e656ca441d654884c149734e4af3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amount: 1
+  level: 10

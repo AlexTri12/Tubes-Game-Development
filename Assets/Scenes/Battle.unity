@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 3339673109477841992, guid: 1f3dfa9cc6a1af24ebf24ba25e4ab366, type: 3}
-  selectedTileColor: {r: 0, g: 1, b: 1, a: 1}
+  selectedTileColor: {r: 0, g: 1, b: 1, a: 0.54901963}
   defaultTileColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &317216908
 Transform:
@@ -232,6 +232,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 14648742717858086, guid: cc13d104ef0eff94eaa409106b5e0bb8, type: 3}
   m_PrefabInstance: {fileID: 14648742507949367}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &492921423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 492921425}
+  - component: {fileID: 492921424}
+  m_Layer: 0
+  m_Name: Volume Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &492921424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492921423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5c44bfb63e858428fbc5f931bc9a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &492921425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492921423}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 515.3062, y: 131.21481, z: -8.695641}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &603812236 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8195831678053008561, guid: fd653ac092faf7140a2b3d82d046ae64, type: 3}
@@ -952,6 +995,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 933976083636264756, guid: f9dc61db896b4cf4f8689ab6c28afa67, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9dc61db896b4cf4f8689ab6c28afa67, type: 3}
 --- !u!1001 &3293277130707425730
@@ -1175,6 +1222,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1287752602}
     m_Modifications:
+    - target: {fileID: 8195831676549521933, guid: fd653ac092faf7140a2b3d82d046ae64, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8195831678053008560, guid: fd653ac092faf7140a2b3d82d046ae64, type: 3}
       propertyPath: group
       value: 

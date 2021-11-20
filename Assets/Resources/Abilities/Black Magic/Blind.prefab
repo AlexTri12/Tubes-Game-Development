@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a5ab1532fcd674fb578d368ad1f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 20
+  level: 50
 --- !u!114 &5640400486848577844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,8 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee9087b2e6346b489b188e02c4fd7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal: 3
-  vertical: 0
+  horizontal: 4
+  vertical: 2
 --- !u!114 &6609149616610503493
 MonoBehaviour:
   m_ObjectHideFlags: 0

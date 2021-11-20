@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4836079715105682059}
   - component: {fileID: 8525060380342879440}
   - component: {fileID: 7584342215301915945}
-  - component: {fileID: 7179170542144043611}
+  - component: {fileID: 4658528880654952288}
   m_Layer: 0
-  m_Name: Fire
+  m_Name: Firaga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a5ab1532fcd674fb578d368ad1f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 45
+  level: 75
 --- !u!114 &8525060380342879440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee9087b2e6346b489b188e02c4fd7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal: 5
+  horizontal: 4
   vertical: 2
 --- !u!114 &7584342215301915945
 MonoBehaviour:
@@ -87,8 +87,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2e656ca441d654884c149734e4af3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 4
---- !u!114 &7179170542144043611
+  amount: 12
+--- !u!114 &4658528880654952288
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,9 +97,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 176275107412443848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd2fcc60d5d951349ac6a8bbee63763e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4696881d7f3ab1c4fa26a71e4f6fdd1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontal: 1
+  vertical: 1
 --- !u!1 &2798765855433292326
 GameObject:
   m_ObjectHideFlags: 0

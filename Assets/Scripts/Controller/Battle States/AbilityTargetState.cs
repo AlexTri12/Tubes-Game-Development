@@ -69,7 +69,7 @@ public class AbilityTargetState : BattleState
     void SelectTiles()
     {
         tiles = ar.GetTilesInRange(board);
-        board.SelectTile(tiles);
+        board.SelectTile(tiles, new Color(1, 0, 0, 0.75f));
     }
 
     IEnumerator ComputerHighligthTarget()

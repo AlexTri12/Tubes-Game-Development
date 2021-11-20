@@ -37,7 +37,7 @@ public class ActionSelectionState : BaseAbilityMenuState
             AbilityMagicCost cost = ability.GetComponent<AbilityMagicCost>();
 
             if (cost)
-                menuOptions.Add(string.Format("{0} : {1}", ability.name, cost.amount));
+                menuOptions.Add(string.Format("{0}~{1}", ability.name, cost.amount));
             else
                 menuOptions.Add(ability.name);
             locks[i] = !ability.CanPerform();

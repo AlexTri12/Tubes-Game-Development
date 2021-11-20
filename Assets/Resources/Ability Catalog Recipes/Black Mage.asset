@@ -18,3 +18,10 @@ MonoBehaviour:
     - Fire
     - Blind
     - Drain
+    - Fira
+    - Firaga
+  - name: White Magic
+    entries:
+    - Cure
+    - Holy
+    - Raise

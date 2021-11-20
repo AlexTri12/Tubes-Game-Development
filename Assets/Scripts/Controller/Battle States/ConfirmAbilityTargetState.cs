@@ -13,7 +13,7 @@ public class ConfirmAbilityTargetState : BattleState
         base.Enter();
         aa = turn.ability.GetComponent<AbilityArea>();
         tiles = aa.GetTilesInArea(board, pos);
-        board.SelectTile(tiles);
+        board.SelectTile(tiles, new Color(0.5f, 0, 0, 0.75f));
         FindTargets();
         RefreshPrimaryStatsPanel(turn.actor.tile.pos);
 
@@ -53,6 +53,7 @@ public class ConfirmAbilityTargetState : BattleState
         {
             if (turn.targets.Count > 0)
             {
+                owner.bmc.Display(turn.ability.name);
                 owner.ChangeState<PerformAbilityState>();
             }
         }
@@ -109,7 +110,7 @@ public class ConfirmAbilityTargetState : BattleState
     IEnumerator ComputerDisplayAbilitySelection()
     {
         owner.bmc.Display(turn.ability.name);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
         owner.ChangeState<PerformAbilityState>();
     }
 }

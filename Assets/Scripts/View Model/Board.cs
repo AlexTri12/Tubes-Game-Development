@@ -6,7 +6,7 @@ using UnityEngine;
 public class Board : MonoBehaviour
 {
     [SerializeField] GameObject tilePrefab;
-    [SerializeField] Color selectedTileColor = new Color(0, 1, 1, 1);
+    [SerializeField] Color selectedTileColor = new Color(0, 1, 1, 0.75f);
     [SerializeField] Color defaultTileColor = new Color(1, 1, 1, 1);
     public Dictionary<Point, Tile> tiles = new Dictionary<Point, Tile>();
 
@@ -121,6 +121,12 @@ public class Board : MonoBehaviour
     {
         for (int i = 0; i < tiles.Count; ++i)
             tiles[i].GetComponent<Renderer>().material.SetColor("_Color", selectedTileColor);
+    }
+
+    public void SelectTile(List<Tile> tiles, Color color)
+    {
+        for (int i = 0; i < tiles.Count; ++i)
+            tiles[i].GetComponent<Renderer>().material.SetColor("_Color", color);
     }
 
     public void DeSelectTile(List<Tile> tiles)

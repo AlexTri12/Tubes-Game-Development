@@ -16,3 +16,5 @@ MonoBehaviour:
   - name: Knight Skill
     entries:
     - Stone Throw
+    - Sweep
+    - First Aid

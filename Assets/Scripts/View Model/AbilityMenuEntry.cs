@@ -9,14 +9,22 @@ public class AbilityMenuEntry : MonoBehaviour
     [SerializeField] Sprite normalSprite;
     [SerializeField] Sprite selectedSprite;
     [SerializeField] Sprite disabledSprite;
-    [SerializeField] Text label;
-    Outline outline;
+    [SerializeField] Text labelName;
+    [SerializeField] Text labelMP;
+    Outline outlineName;
+    Outline outlineMP;
 
     public string Title
     {
-        get { return label.text; }
-        set { label.text = value; }
+        get { return labelName.text; }
+        set { labelName.text = value; }
     }
+    public string ManaCost
+    {
+        get { return labelMP.text; }
+        set { labelMP.text = value; }
+    }
+
     States State
     {
         get { return state; }
@@ -29,20 +37,26 @@ public class AbilityMenuEntry : MonoBehaviour
             if (IsLocked)
             {
                 bullet.sprite = disabledSprite;
-                label.color = Color.gray;
-                outline.effectColor = new Color32(20, 36, 44, 255);
+                labelName.color = Color.gray;
+                labelMP.color = Color.gray;
+                outlineName.effectColor = new Color32(20, 36, 44, 255);
+                outlineMP.effectColor = new Color32(20, 36, 44, 255);
             }
             else if (IsSelected)
             {
                 bullet.sprite = selectedSprite;
-                label.color = new Color32(249, 210, 118, 255);
-                outline.effectColor = new Color32(255, 160, 72, 255);
+                labelName.color = new Color32(249, 210, 118, 255);
+                labelMP.color = new Color32(249, 210, 118, 255);
+                outlineName.effectColor = new Color32(255, 160, 72, 255);
+                outlineMP.effectColor = new Color32(255, 160, 72, 255);
             }
             else
             {
                 bullet.sprite = normalSprite;
-                label.color = Color.white;
-                outline.effectColor = new Color32(8, 0, 255, 128);
+                labelMP.color = Color.white;
+                labelName.color = Color.white;
+                outlineName.effectColor = new Color32(8, 0, 255, 128);
+                outlineMP.effectColor = new Color32(8, 0, 255, 128);
             }
         }
     }
@@ -50,7 +64,8 @@ public class AbilityMenuEntry : MonoBehaviour
 
     void Awake()
     {
-        outline = label.GetComponent<Outline>();
+        outlineName = labelName.GetComponent<Outline>();
+        outlineMP = labelMP.GetComponent<Outline>();
     }
 
     public bool IsLocked

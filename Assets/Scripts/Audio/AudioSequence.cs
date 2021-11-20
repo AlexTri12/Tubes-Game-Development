@@ -23,11 +23,13 @@ public class AudioSequence : MonoBehaviour
             UnPause();
 
         double startTime = GetNextStartTime();
+        float defaultVolume = (float)VolumeData.INSTANCE.bgmVolume / 100;
         for (int i = 0; i < clips.Length; ++i)
         {
             AudioClip clip = clips[i];
             AudioSequenceData data = GetData(clip);
             data.Schedule(startTime);
+            data.source.volume = defaultVolume;
             startTime += clip.length;
         }
     }
@@ -100,5 +102,25 @@ public class AudioSequence : MonoBehaviour
             return lastToPlay.endTime;
         else
             return AudioSettings.dspTime;
+    }
+
+    // Change volume from the volume settings
+    private void Awake()
+    {
+        this.AddObserver(OnBGMChanged, VolumeData.BGMVolumeChanged);
+    }
+
+    private void OnDestroy()
+    {
+        this.RemoveObserver(OnBGMChanged, VolumeData.BGMVolumeChanged);
+    }
+
+    void OnBGMChanged(object sender, object args)
+    {
+        float value = (float)((int)args) / 100;
+        foreach (AudioSequenceData data in playMap.Values)
+        {
+            data.source.VolumeTo(value);
+        }
     }
 }

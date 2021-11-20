@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5268492094448074624}
   - component: {fileID: 960614162890446413}
   - component: {fileID: 4220665390268921787}
+  - component: {fileID: -5143455525583242976}
   m_Layer: 0
   m_Name: Holy
   m_TagString: Untagged
@@ -86,6 +87,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd2fcc60d5d951349ac6a8bbee63763e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5143455525583242976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2609343628173518790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2e656ca441d654884c149734e4af3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 18
 --- !u!1 &5903583983871746542
 GameObject:
   m_ObjectHideFlags: 0
