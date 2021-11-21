@@ -27,7 +27,7 @@ public class InventoryData : MonoBehaviour
         }
     }
 
-    public void BuyConsumeable(string consumable, int amount)
+    public void GetConsumeable(string consumable, int amount)
     {
         if (consumeables.ContainsKey(consumable))
             consumeables[consumable] += amount;
@@ -35,7 +35,7 @@ public class InventoryData : MonoBehaviour
             consumeables.Add(consumable, amount);
     }
 
-    public void SellConsumeable(string consumable, int amount)
+    public void RemoveConsumeable(string consumable, int amount)
     {
         if (consumeables.ContainsKey(consumable))
         {
@@ -45,17 +45,34 @@ public class InventoryData : MonoBehaviour
         }
     }
 
-    public void Consume(string consumable)
+    public Consumeable Consume(string consumable)
     {
         if (consumeables.ContainsKey(consumable))
         {
             consumeables[consumable]--;
             if (consumeables[consumable] == 0)
                 consumeables.Remove(consumable);
+
+            GameObject c = InstantiatePrefab("Consumeables/" + consumable);
+            c.name = consumable;
+            return c.GetComponent<Consumeable>();
         }
+        else
+            return null;
     }
 
-    public void BuyEquippable(string equippable, int amount)
+    public void CancelConsume(Consumeable consumeable)
+    {
+        string name = consumeable.gameObject.name;
+        if (consumeables.ContainsKey(name))
+            consumeables[name]++;
+        else
+            consumeables.Add(name, 1);
+
+        Destroy(consumeable.gameObject);
+    }
+
+    public void GetEquippable(string equippable, int amount)
     {
         if (equippables.ContainsKey(equippable))
             equippables[equippable] += amount;
@@ -63,7 +80,7 @@ public class InventoryData : MonoBehaviour
             equippables.Add(equippable, amount);
     }
 
-    public void SellEquippable(string equippable, int amount)
+    public void RemoveEquippable(string equippable, int amount)
     {
         if (equippables.ContainsKey(equippable))
         {
@@ -73,7 +90,7 @@ public class InventoryData : MonoBehaviour
         }
     }
 
-    public void EquipEquippable(string equippable)
+    public Equippable EquipEquippable(string equippable)
     {
         if (equippables.ContainsKey(equippable))
         {
@@ -85,10 +102,16 @@ public class InventoryData : MonoBehaviour
                 equipments[equippable]++;
             else
                 equipments.Add(equippable, 1);
+
+            GameObject e = InstantiatePrefab("Equippables/" + equippable);
+            e.name = equippable;
+            return e.GetComponent<Equippable>();
         }
+        else
+            return null;
     }
 
-    public void UnEquipEquipment(string equipment)
+    public void UnEquipEquipment(string equipment, Equippable e)
     {
         if (equipments.ContainsKey(equipment))
         {
@@ -100,6 +123,9 @@ public class InventoryData : MonoBehaviour
                 equippables[equipment]++;
             else
                 equippables.Add(equipment, 1);
+
+            e.OnUnEquip();
+            Destroy(e.gameObject);
         }
     }
 
@@ -178,6 +204,19 @@ public class InventoryData : MonoBehaviour
                 consumeables.Add(data.consumableName, data.amount);
             }
         }
+    }
+
+    GameObject InstantiatePrefab(string name)
+    {
+        GameObject prefab = Resources.Load<GameObject>(name);
+        if (prefab == null)
+        {
+            Debug.LogError("No prefab for name: " + name);
+            return new GameObject(name);
+        }
+
+        GameObject instance = GameObject.Instantiate(prefab);
+        return instance;
     }
 
     [System.Serializable]

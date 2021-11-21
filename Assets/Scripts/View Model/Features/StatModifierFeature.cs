@@ -9,7 +9,13 @@ public class StatModifierFeature : Feature
 
     Stats stats
     {
-        get { return _target.GetComponentInParent<Stats>(); }
+        get
+        {
+            if (_target.GetComponentInParent<Stats>() != null)
+                return _target.GetComponentInParent<Stats>();
+            else
+                return _target.GetComponent<Stats>();
+        }
     }
 
     protected override void OnApply()

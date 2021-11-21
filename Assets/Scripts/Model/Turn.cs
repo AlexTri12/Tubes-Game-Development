@@ -14,6 +14,7 @@ public class Turn
     public List<Tile> targets;
     public PlanOfAttack plan;
     public UnitAnimation animation;
+    public Consumeable consumeable;
 
     public void Change(Unit current)
     {
@@ -24,6 +25,7 @@ public class Turn
         startTile = actor.tile;
         startDir = actor.dir;
         plan = null;
+        consumeable = null;
         animation = actor.GetComponent<UnitAnimation>();
         animation.IdleState();
     }

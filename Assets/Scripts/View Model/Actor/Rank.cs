@@ -14,11 +14,13 @@ public class Rank : MonoBehaviour
     {
         get { return stats[StatsTypes.LVL]; }
     }
+    
     public int EXP
     {
         get { return stats[StatsTypes.EXP]; }
         set { stats[StatsTypes.EXP] = value; }
     }
+
     public float LevelPercent
     {
         get { return (float)(LVL - minLevel) / (float)(maxLevel - minLevel); }

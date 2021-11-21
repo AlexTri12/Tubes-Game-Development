@@ -15,6 +15,7 @@ public class InitBattleState : BattleState
         board.Load(levelData);
         Point p = new Point((int)levelData.tiles[0].x, (int)levelData.tiles[0].z);
         SelectTile(p);
+        AddInventory();
         SpawnTestUnits();
         owner.round = owner.gameObject.AddComponent<TurnOrderController>().Round();
         yield return null;
@@ -47,6 +48,17 @@ public class InitBattleState : BattleState
             unit.Match();
 
             units.Add(unit);
+
+            if (i == 0)
+            {
+                Equippable e = InventoryData.INSTANCE.EquipEquippable("Short Sword");
+                unit.GetComponent<Equipment>().Equip(e, EquipSlots.Primary);
+            }
+            else if (i == 1)
+            {
+                Equippable e = InventoryData.INSTANCE.EquipEquippable("Short Rod");
+                unit.GetComponent<Equipment>().Equip(e, EquipSlots.Primary);
+            }
         }
 
         SelectTile(units[0].tile.pos);
@@ -56,5 +68,13 @@ public class InitBattleState : BattleState
     void AddVictoryCondition()
     {
         DefeatAllEnemiesVictoryCondition vc = owner.gameObject.AddComponent<DefeatAllEnemiesVictoryCondition>();
+    }
+
+    void AddInventory()
+    {
+        InventoryData.INSTANCE.GetConsumeable("Potion", 10);
+        InventoryData.INSTANCE.GetConsumeable("Hi-Potion", 5);
+        InventoryData.INSTANCE.GetEquippable("Short Sword", 1);
+        InventoryData.INSTANCE.GetEquippable("Short Rod", 1);
     }
 }

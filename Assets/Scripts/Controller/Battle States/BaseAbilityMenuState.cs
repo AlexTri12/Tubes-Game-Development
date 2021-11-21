@@ -38,6 +38,8 @@ public abstract class BaseAbilityMenuState : BattleState
     }
 
     protected abstract void LoadMenu();
+
     protected abstract void Confirm();
+    
     protected abstract void Cancel();
 }
