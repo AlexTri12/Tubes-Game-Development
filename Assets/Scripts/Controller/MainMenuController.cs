@@ -11,6 +11,7 @@ public class MainMenuController : MonoBehaviour
 {
     public GameObject panelMainMenu;
     public GameObject panelSettings;
+    public SceneLoader sceneLoader;
     bool isSettings
     {
         get { return panelSettings.activeSelf; }
@@ -153,7 +154,9 @@ public class MainMenuController : MonoBehaviour
         {
             case 0:
                 // Start New Game
-                SceneManager.LoadScene(1);
+                panelMainMenu.SetActive(false);
+                panelSettings.SetActive(false);
+                sceneLoader.StartLoadScene(1);
                 break;
             case 1:
                 // Load Game
