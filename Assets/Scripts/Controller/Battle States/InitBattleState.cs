@@ -59,6 +59,10 @@ public class InitBattleState : BattleState
                 Equippable e = InventoryData.INSTANCE.EquipEquippable("Short Rod");
                 unit.GetComponent<Equipment>().Equip(e, EquipSlots.Primary);
             }
+
+            // For checking victory condition - faster
+            // Health h = instance.GetComponent<Health>();
+            // h.HP = 1;
         }
 
         SelectTile(units[0].tile.pos);

@@ -40,7 +40,7 @@ public class PerformItemState : BattleState
             owner.ChangeState<CutSceneState>();
         else if (!UnitHasControl())
             owner.ChangeState<SelectUnitState>();
-        if (turn.hasUnitMoved)
+        else if (turn.hasUnitMoved)
             owner.ChangeState<EndFacingState>();
         else
             owner.ChangeState<CommandSelectionState>();
